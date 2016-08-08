@@ -1,0 +1,17 @@
+<% if @song.errors.any? %>
+  <div>
+    <strong>Your post had some issues:</strong>
+    <ul>
+      <% @song.errors.full_messages.each do |err| %>
+       <li><%= err %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<form method="post" action="/songs">
+  <div><label>Title: </label><input type=text name="title" value="Fear of the Dark"></div>
+  <div><label>Author: </label><input type=text name="author" value="Iron Maiden"></div>
+  <div><label>URL: </label><input type=text name="url" value="http://www.google.com/q?fear%20of%20the%dark"></div>
+  <div><input type=submit value="Submit"></div>
+</form>
