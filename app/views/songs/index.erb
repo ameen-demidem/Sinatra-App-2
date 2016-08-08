@@ -1,0 +1,12 @@
+<h1>Songs go here...</h1>
+<% @songs.each do |song| %>
+  <div class="song">
+    <ul>
+      <li><strong>Song title:</strong> <%= song.title %></li>
+      <li><strong>Song author:</strong> <%= song.author %></li>
+      <li><strong>Song url:</strong> <%= song.url %></li>
+      <li><strong>Song create at:</strong> <%= song.created_at %></li>
+      <li><strong>Song last update:</strong> <%= song.updated_at %></li>
+    </ul>
+  </div>
+<% end %>
